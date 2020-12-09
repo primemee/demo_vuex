@@ -54,15 +54,9 @@ export default {
     computed:{
         ...mapState(['cart']),
         ...mapGetters(['cartTotal','shopData']),
-        // shopData(){
-        //     return this.$store.getters.shopData
-        // }
     },
     methods: {
         ...mapActions(['addCart','getShopData']),
-        test(){
-            console.log(this.shopData);
-        }
     },
     created() {
         this.$store.dispatch('getShopData')
